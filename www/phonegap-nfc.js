@@ -495,8 +495,16 @@ var nfc = {
     // iOS only
     invalidateSession: function (win, fail) {
         cordova.exec(win, fail, "NfcPlugin", "invalidateSession", []);
-    }
+    },
 
+    readMifare: function (win, fail) {
+        cordova.exec(win, fail, "NfcPlugin", "readMf", []);
+    },
+
+    //TODO implement
+    // readMifareSecBloc: function (sector ,bloque, win, fail) {     
+    //     cordova.exec(win, fail, "NfcPlugin", "readMf_SB", [sector, bloque]);
+    // }
 };
 
 var util = {
